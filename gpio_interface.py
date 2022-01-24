@@ -14,7 +14,7 @@ class geep():
             self.configured_outputs.append(pin_list[x])
     def config_inputs(self, pin_list):
         for x in range(0, len(pin_list)):
-            GPIO.setup(pinlist[x],GPIO.IN)
+            GPIO.setup(pin_list[x],GPIO.IN)
             self.configured_inputs.append(pin_list[x])
     def batch_read_input(self):
         self.current_input_readings = []
