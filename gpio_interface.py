@@ -17,9 +17,10 @@ class geep():
             GPIO.setup(pin_list[x],GPIO.IN)
             self.configured_inputs.append(pin_list[x])
     def batch_read_input(self):
-        self.current_input_readings = []
+        matapp=[]
         for x in range(0, len(self.configured_inputs)):
-            self.current_input_readings.append(GPIO.input(self.configured_inputs[x]))
+            matapp.append(GPIO.input(self.configured_inputs[x]))
+        self.current_input_readings.append(matapp)
     def highlow_batch_send_output(self, outputlist):
         if(len(outputlist!=len(self.configured_outputs))):
             return(False)
